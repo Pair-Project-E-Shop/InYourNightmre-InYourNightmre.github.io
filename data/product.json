@@ -1,0 +1,63 @@
+[ {
+  "name": "Nasi Goreng Spesial",
+  "description": "Nasi goreng dengan bumbu khusus dan topping udang, ayam, dan telur",
+  "price": 35000,
+  "category_id": 1,
+  "imageURL": "https://www.example.com/images/nasi-goreng.jpg"
+},
+{
+  "name": "Tas Wanita Kulit Asli",
+  "description": "Tas wanita dengan bahan kulit asli berkualitas tinggi dan desain yang elegan",
+  "price": 750000,
+  "category_id": 2,
+  "imageURL": "https://www.example.com/images/tas-wanita.jpg"
+},
+{
+  "name": "Smartwatch Samsung Galaxy Watch 4",
+  "description": "Smartwatch dengan berbagai fitur canggih dan tahan air hingga 50 meter",
+  "price": 3000000,
+  "category_id": 3,
+  "imageURL": "https://www.example.com/images/samsung-watch.jpg"
+},
+{
+  "name": "Sepatu Lari Nike Air Zoom Pegasus 38",
+  "description": "Sepatu lari dengan teknologi Zoom Air dan kualitas yang terjamin",
+  "price": 1700000,
+  "category_id": 4,
+  "imageURL": "https://www.example.com/images/nike-pegasus.jpg"
+},
+{
+  "name": "Obat Flu dan Batuk",
+  "description": "Obat yang efektif untuk meredakan gejala flu dan batuk",
+  "price": 25000,
+  "category_id": 5,
+  "imageURL": "https://www.example.com/images/obat-flu.jpg"
+},
+{
+  "name": "Lego City Fire Rescue",
+  "description": "Set mainan dengan tema pemadam kebakaran dan kendaraan yang lengkap",
+  "price": 500000,
+  "category_id": 6,
+  "imageURL": "https://www.example.com/images/lego-fire-rescue.jpg"
+},
+{
+  "name": "Panci Set Teflon",
+  "description": "Set panci berkualitas tinggi dengan bahan teflon anti lengket",
+  "price": 800000,
+  "category_id": 7,
+  "imageURL": "https://www.example.com/images/panci-teflon.jpg"
+},
+{
+  "name": "Sneakers Adidas Superstar",
+  "description": "Sneakers dengan desain klasik dan bahan berkualitas tinggi",
+  "price": 1200000,
+  "category_id": 4,
+  "imageURL": "https://www.example.com/images/adidas-superstar.jpg"
+},
+{
+  "name": "Kemeja Pria Slim Fit",
+  "description": "Kemeja pria dengan desain slim fit dan bahan berkualitas tinggi",
+  "price": 350000,
+  "category_id": 2,
+  "imageURL": "https://www.example.com/images/kemeja-slim-fit.jpg"
+}]

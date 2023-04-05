@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Tasya Deswandhy",
+    "location": "Jakarta, Indonesia",
+    "noHp": "+62 812-3456-7890",
+    "userId": 1
+  },
+  {
+    "id": 2,
+    "name": "Iyn Kurnia",
+    "location": "Bandung, Indonesia",
+    "noHp": "+62 812-9876-5432",
+    "userId": 2
+  },
+  {
+    "id": 3,
+    "name": "David Ferneley",
+    "location": "London, United Kingdom",
+    "noHp": "+44 7911-123456",
+    "userId": 3
+  },
+  {
+    "id": 4,
+    "name": "Rebecca Kettlestring",
+    "location": "Oxford, United Kingdom",
+    "noHp": "+44 1865-123456",
+    "userId": 4
+  }
+]
