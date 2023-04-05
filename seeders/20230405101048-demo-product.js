@@ -12,7 +12,7 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    const data = JSON.parse(fs.readFileSync('./data/user.json', 'utf-8'))
+    const data = JSON.parse(fs.readFileSync('./data/product.json', 'utf-8'))
     data.forEach(e => {
       e.createdAt = e.updatedAt = new Date()
     });
