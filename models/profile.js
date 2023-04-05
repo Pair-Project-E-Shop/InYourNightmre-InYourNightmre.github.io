@@ -20,6 +20,12 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Profile',
+    hooks:{
+      beforeCreate:(profile) => {
+        let noHp = `+62${profile.noHp}`
+        profile.noHp = noHp
+      }
+    }
   });
   return Profile;
 };

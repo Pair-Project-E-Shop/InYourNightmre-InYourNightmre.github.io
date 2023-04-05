@@ -11,6 +11,7 @@ module.exports = {
      */
     return queryInterface.addColumn('Profiles', 'UserId', { 
       type: Sequelize.INTEGER,
+      autoIncrement: true,
       references:{
         model: 'Users',
         key: 'id'
