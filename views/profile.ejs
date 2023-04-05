@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('partials/css-script') %>
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1 class="text-center">Sign Up</h1>
+    </div>
+    <form action="/profile" method="post">
+    <label for="exampleFormControlInput1" class="form-label mt-3">Nama</label>
+    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="name">
+    <label for="exampleFormControlInput1" class="form-label mt-3">location</label>
+    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" name="location">
+    <label class="sr-only mt-3" for="inlineFormInputGroup">handphone</label>
+      <div class="input-group mb-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">+62</div>
+        </div>
+        <input type="number" class="form-control" id="inlineFormInputGroup" placeholder="No handphone" name="noHp">
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </div>
+  </form>
+  </div>
+  <%- include('partials/javascript') %>
+</body>
+</html>
