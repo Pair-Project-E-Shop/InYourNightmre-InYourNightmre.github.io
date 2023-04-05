@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Makanan"
+  },
+  {
+    "id": 2,
+    "name": "Fashion"
+  },
+  {
+    "id": 3,
+    "name": "Elektronik"
+  },
+  {
+    "id": 4,
+    "name": "Sepatu"
+  },
+  {
+    "id": 5,
+    "name": "Obat-obatan"
+  },
+  {
+    "id": 6,
+    "name": "Mainan"
+  },
+  {
+    "id": 7,
+    "name": "Peralatan Masak"
+  }
+]

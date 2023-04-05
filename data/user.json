@@ -1,0 +1,21 @@
+[{
+  "id": 1,
+  "role": "admin",
+  "email": "tdeswandhy18@gmail.com",
+  "password": "majalengka"
+}, {
+  "id": 2,
+  "role": "admin",
+  "email": "iyn@gmail.com",
+  "password": "12345678"
+}, {
+  "id": 3,
+  "role": "user",
+  "email": "dferneley2@gmail.com",
+  "password": "0987654321"
+}, {
+  "id": 4,
+  "role": "user",
+  "email": "rkettlestring3@ox.ac.uk",
+  "password": "cirebon123"
+}]
