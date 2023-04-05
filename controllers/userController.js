@@ -27,6 +27,13 @@ class userController{
       .catch(err => res.send(err))
       
     }
+
+    static logOut(req, res){
+      req.session.destroy((err) => {
+        if(err) res.send(err)
+        else res.redirect('/login')
+      })
+    }
 }
 
 module.exports = userController
