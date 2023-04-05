@@ -3,7 +3,7 @@ const Controller = require('../controllers')
 const userController = require('../controllers/userController')
 
 
-router.get('/')
+router.get('/', Controller.homeProduct)
 router.get('/login', Controller.homeLogin)
 router.post(`/login`, Controller.validateLogin)
 router.get('/signup', userController.signUpForm)

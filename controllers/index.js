@@ -1,4 +1,4 @@
-const {User} = require("../models")
+const {User, Product} = require("../models")
 const bcrypt = require('bcryptjs')
 
 
@@ -26,6 +26,19 @@ class Controller{
       }
     })
   }
+
+//============= product ==========
+  static homeProduct(req, res) {
+  Product.findAll()
+    .then((products) => {
+      res.render('products', { products });
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send('ini error');
+    });
+}
+
 }
 
 module.exports = Controller

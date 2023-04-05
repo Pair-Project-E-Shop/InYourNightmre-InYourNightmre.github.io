@@ -14,6 +14,7 @@ module.exports = {
     */
     const data = JSON.parse(fs.readFileSync('./data/category.json', 'utf-8'))
     data.forEach(e => {
+      delete e.id
       e.createdAt = e.updatedAt = new Date()
     });
     return queryInterface.bulkInsert('Categories', data, {});
