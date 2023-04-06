@@ -15,6 +15,7 @@ app.use(session({
   secret: 'mau tau yaaaa',
   resave: false,
   saveUninitialized: false,
+  maxAge: Date.now() + (30 * 86400 * 1000),
   cookie: {
      secure: false,
      sameSite: true

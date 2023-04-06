@@ -1,7 +1,8 @@
-const { User, Product, Category } = require("../models")
+const { User, Product, Category, Chart } = require("../models")
 const bcrypt = require('bcryptjs')
 const formatSalary = require('../helper/formatSalary')
 const {Op} = require('sequelize')
+
 
 class Controller {
   static homeLogin(req, res) {
@@ -119,7 +120,15 @@ class Controller {
   }
 
   static buy(req, res) {
+    const userId = req.session.UserId
+    const productId = req.params.productId
+    const data = {UserId:userId,ProductId:productId}
 
+    Chart.create(data)
+    .then((el) => {
+      res.redirect(`/product/${productId}`)
+    })
+    .catch((err)=> res.send(err))
   }
 
   static editProduct(req, res) {

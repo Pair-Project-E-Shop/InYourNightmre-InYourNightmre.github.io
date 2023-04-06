@@ -15,16 +15,17 @@ const upload = multer({storage: storage})
 
 
 router.get('/login', Controller.homeLogin)
-router.post(`/login`, Controller.validateLogin)
+router.post('/login', Controller.validateLogin)
 router.get('/signup', userController.signUpForm)
 router.post('/signup', userController.postSignUp)
 router.get('/profile', userController.profile)
 router.post('/profile', userController.addProfile)
 router.get('/logout', userController.logOut)
+router.get('/profile:', userController.viewProfile)//menampilkan data profile yang sudah di sign up
 
 router.use((req, res, next) => {
   if(!req.session.UserId){
-    const error = `please you must be login dont be crazy as fuck`
+    const error = `please you must be login baby!`
     return res.redirect(`/login?error=${error}`)
   }
   next()
@@ -37,5 +38,5 @@ router.get('/product/:productId', Controller.detailProduct)
 router.get('/product/:productId/delete', Controller.deleteProduct)
 router.get('/product/:productId/edit', Controller.editProduct)
 router.post('/product/:productId/edit', Controller.updateProduct)
-
+router.get('/product/:productId/buy', Controller.buy)
 module.exports = router
