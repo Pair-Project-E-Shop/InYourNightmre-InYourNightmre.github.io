@@ -78,7 +78,7 @@ class Controller {
   }
 
   static createProduct(req, res) {
-    let filename = req.protocol + "://" + req.get("host") + '/uploads' + req.file.filename
+    let filename = `../Images/${req.file.filename}` 
     let { name, description, price, CategoryId, imageURL } = req.body
     imageURL = filename
     Product.create({ name, description, price, CategoryId, imageURL })

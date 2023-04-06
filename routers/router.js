@@ -21,7 +21,7 @@ router.post('/signup', userController.postSignUp)
 router.get('/profile', userController.profile)
 router.post('/profile', userController.addProfile)
 router.get('/logout', userController.logOut)
-router.get('/profile:', userController.viewProfile)//menampilkan data profile yang sudah di sign up
+router.get('/profile/user', userController.viewProfile)//menampilkan data profile yang sudah di sign up
 
 router.use((req, res, next) => {
   if(!req.session.UserId){
