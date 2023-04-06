@@ -53,18 +53,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    imageURL: {
-      type: DataTypes.TEXT,
-      allowNull:false,
-      validate:{
-        notNull:{
-          msg: `image is required`
-        },
-        notEmpty:{
-          msg: `image is required`
-        }
-      }
-    },
+    imageURL: DataTypes.TEXT,
     CategoryId: {
       type: DataTypes.INTEGER,
       allowNull:false,

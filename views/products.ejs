@@ -9,7 +9,7 @@
   <style>
     .card-img-top {
       height: 250px;
-      display: block;
+      display: inline-block;
     }
   </style>
 </head>
@@ -17,7 +17,13 @@
   
 
 <%- include('partials/nav') %>
-
+<div class="container">
+  <form class="container mt-3" action="/" method="get">
+    <div class="input-group mb-3">
+      <input class="form-control" type="text" placeholder="Search .." aria-label="default input example" name="search">
+      <button class="btn btn-outline-primary" type="submit" id="button-addon2">Submit</button>
+    </div>
+  </form>
 <div class="row">
   <% listProduct.forEach(e  => { %>
       <div class="col-md-3 mb-3">
@@ -30,12 +36,16 @@
                   <p class="card-text">
                       <%= e.description %>
                   </p>
+                  <p class="card-text">
+                    Category: <br>
+                    <%= e.Category.name %>
+                </p>
                   <div class="mt-auto">
                       <div class="row">
                           <div class="col-md-6">
                               <a href="/product/<%= e.id %>" class="btn btn-primary">See details</a>
                               <% if (user.role === "admin") { %>
-                                <a href="/arts/<%= e.id %>/delete" class="btn btn-danger">Delete</a>
+                                <a href="/product/<%= e.id %>/delete" class="btn btn-danger">Delete</a>
                               <% } %>
                           </div>
                       </div>

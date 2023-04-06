@@ -1,7 +1,17 @@
 const router = require('express').Router()
 const Controller = require('../controllers')
 const userController = require('../controllers/userController')
-
+const path = require('path')
+const multer = require('multer')
+const storage = multer.diskStorage({
+  destination:(req, file, cb)=>{
+    cb(null, 'Images')
+  },
+  filename:(req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname))
+  }
+})
+const upload = multer({storage: storage})
 
 
 router.get('/login', Controller.homeLogin)
@@ -22,7 +32,10 @@ router.use((req, res, next) => {
 
 router.get('/', Controller.homeProduct)
 router.get('/add/product', Controller.addProduct)
-router.post('/add/product', Controller.createProduct)
-router.get('/product/:productId')
+router.post('/add/product', upload.single('imageURL') ,Controller.createProduct)
+router.get('/product/:productId', Controller.detailProduct)
+router.get('/product/:productId/delete', Controller.deleteProduct)
+router.get('/product/:productId/edit', Controller.editProduct)
+router.post('/product/:productId/edit', Controller.updateProduct)
 
 module.exports = router
