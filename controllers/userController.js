@@ -38,7 +38,7 @@ class userController {
     const { UserId } = req.session;
     Profile.findOne({
       where: { UserId },
-      include: { model: User, attributes: ["email"] },
+      include: { model: User, attributes: ["email", "role"] },
     })
       .then((profile) => {
         res.render("viewProfile", { profile });

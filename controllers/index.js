@@ -63,6 +63,7 @@ class Controller {
 
   static addProduct(req, res) {
     let userid = req.session.UserId
+    let error = req.query.error
     let listCategory
     Category.findAll()
       .then((list) => {
@@ -70,20 +71,31 @@ class Controller {
         return User.findByPk(userid)
       })
       .then((user) => {
-        res.render('addProduct', { user, listCategory })
+        res.render('addProduct', { user, listCategory, error })
       })
       .catch((err) => {
-        res.send('ini error');
+        res.send(err);
       });
   }
 
   static createProduct(req, res) {
-    let filename = `../Images/${req.file.filename}` 
     let { name, description, price, CategoryId, imageURL } = req.body
-    imageURL = filename
+    if(req.file.filename){
+      let filename = req.file.filename 
+      imageURL = filename
+    }
     Product.create({ name, description, price, CategoryId, imageURL })
       .then(() => res.redirect('/'))
-      .catch((err) => res.send(err))
+      .catch((err) => {
+        if (err.name === "SequelizeValidationError") {
+          const error = err.errors.map(el => {
+            return el.message
+          })
+          res.redirect(`/add/product?error=${error}`)
+        }else{
+          res.send(err)
+        }
+      })
   }
 
   static detailProduct(req, res) {
@@ -111,7 +123,7 @@ class Controller {
       },
     })
       .then(() => {
-        res.redirect('/products');
+        res.redirect('/');
       })
       .catch((err) => {
         response.send(err)
